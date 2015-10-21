@@ -39,6 +39,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'video'
       })
+      .when('/lyrics', {
+        templateUrl: 'views/lyrics.html',
+        controller: 'MainCtrl',
+        controllerAs: 'lyrics'
+      })
       .otherwise({
         redirectTo: '/'
       });
