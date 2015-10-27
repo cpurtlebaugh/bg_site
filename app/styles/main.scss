@@ -3,8 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-$brand-primary: black;
-$brand-secondary: white;
+$brand-heading: #282828;
+$brand-accent: #d49575;
+// $brand-body: #747474;
+$brand-body: white;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -16,36 +18,72 @@ $brand-secondary: white;
 body {
   padding: 0;
   overflow: hidden;
-  background-color: $brand-primary;
+  background-color: $brand-body;
 }
 
+
 .center-block {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+#myCarousel {
+   width: 350px;
+  height: 350px;
+}
+
+.carousel-inner {
+  .item {
+    a {
+      img {
+      carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+}
+    }
+  }
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
 .imc_embed_signup {
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+
+
+  input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background-color: black;
+    border-color: white;
+    margin: 5px
+  }
 }
+
+
+
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing {
   padding-left: 15px;
   padding-right: 15px;
-  background-color: $brand-secondary;
+  background-color: $brand-heading;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  // border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-  background-color: $brand-secondary;
+  background-color: $brand-heading;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -56,9 +94,24 @@ body {
   }
 
   a {
-    color: black;
+    color: white;
+    background-color: $brand-heading;
   }
 
+  li a:hover {
+    color: black;
+    background-color: white;
+  }
+
+  li a:active {
+  color: black;
+  background-color: white;
+  }
+
+  li a:focus {
+  color: black;
+  background-color: white;
+  }
 }
 
 .navbar-nav {
@@ -74,11 +127,11 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 50px;
   position: fixed;
   bottom: 0;
   z-index: 1;
-  background-color: $brand-secondary;
+  background-color: white;
   margin-top: 10px;
 }
 
@@ -103,25 +156,6 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
