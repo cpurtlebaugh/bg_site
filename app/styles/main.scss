@@ -22,35 +22,37 @@ body {
 }
 
 
+// .center-block {
+//   width: 350px;
+//   height: 350px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.carousel-control.left {
+  background-image: none;
+}
+
+.carousel-control.right {
+  background-image: none;
+}
+
 .center-block {
-  width: 350px;
-  height: 350px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#myCarousel {
-   width: 350px;
+   width: 450px;
   height: 350px;
 }
 
-.carousel-inner {
-  .item {
-    a {
-      img {
-      carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-}
+.carousel-inner.item {
+   .carousel-inner {
+    img:active {
+      max-width: 350px;
+      max-height: 350px;
     }
   }
-    position: relative;
-    overflow: hidden;
-    width: 100%;
 }
+
+
 .imc_embed_signup {
   margin-top: 15px;
   margin-left: auto;
@@ -66,9 +68,6 @@ body {
     margin: 5px
   }
 }
-
-
-
 
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
