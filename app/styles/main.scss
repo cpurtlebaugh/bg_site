@@ -22,14 +22,7 @@ body {
 }
 
 
-// .center-block {
-//   width: 350px;
-//   height: 350px;
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
+// photo carousel
 .carousel-control.left {
   background-image: none;
 }
@@ -39,7 +32,7 @@ body {
 }
 
 .center-block {
-   width: 450px;
+   width: 500px;
   height: 350px;
 }
 
@@ -51,24 +44,33 @@ body {
     }
   }
 }
+// end photo carousel
 
-
+// mailchimp signup
 .imc_embed_signup {
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
 
-
   input, button, select, textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    background-color: black;
+    background-color: white;
     border-color: white;
-    margin: 5px
+    margin: 5px;
+    float: left;
+  }
+  #mc-embedded-subscribe {
+    background: black !important;
+    color: white;
   }
 }
 
+.mailchimp {
+  float: left;
+}
+// end mailchimp sign up
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
