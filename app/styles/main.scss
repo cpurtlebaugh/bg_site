@@ -17,34 +17,12 @@ $brand-body: white;
 
 body {
   padding: 0;
+  max-height: 450px;
   overflow: hidden;
   background-color: $brand-body;
 }
 
 
-// photo carousel
-.carousel-control.left {
-  background-image: none;
-}
-
-.carousel-control.right {
-  background-image: none;
-}
-
-.center-block {
-   width: 500px;
-  height: 350px;
-}
-
-.carousel-inner.item {
-   .carousel-inner {
-    img:active {
-      max-width: 350px;
-      max-height: 350px;
-    }
-  }
-}
-// end photo carousel
 
 // mailchimp signup
 .imc_embed_signup {
@@ -64,12 +42,15 @@ body {
   #mc-embedded-subscribe {
     background: black !important;
     color: white;
+      margin-bottom: 20px;
   }
+
 }
 
-.mailchimp {
-  float: left;
-}
+// .mailchimp {
+//   float: left;
+//   margin-bottom: 10px;
+// }
 // end mailchimp sign up
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -80,11 +61,22 @@ body {
   background-color: $brand-heading;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background-color: white;
+}
+
 /* Custom page header */
 .header {
   // border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
   background-color: $brand-heading;
+  opacity: 50%;
+  width: 100%;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -105,13 +97,13 @@ body {
   }
 
   li a:active {
-  color: black;
-  background-color: white;
+    color: black;
+    background-color: white;
   }
 
   li a:focus {
-  color: black;
-  background-color: white;
+    color: black;
+    background-color: white;
   }
 }
 
@@ -122,10 +114,15 @@ body {
      float: none;
      display: inline-block;
    }
+   button.navbar-toggle {
+    background-color: white;
+   }
  }
+
 
 .footer {
   position: absolute;
+  padding-bottom: 25px;
   bottom: 0;
   width: 100%;
   height: 50px;
@@ -158,25 +155,82 @@ body {
 }
 
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+// /* Responsive: Portrait tablets and up */
+// @media screen and (min-width: 768px) {
+//   .container {
+//     max-width: 730px;
+//   }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
+//   /* Remove the padding we set earlier */
+//   .header,
+//   .marketing,
+//   .footer {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+//   /* Space out the masthead */
+//   .header {
+//     margin-bottom: 30px;
+//   }
+//   /* Remove the bottom border on the jumbotron for visual effect */
+//   .jumbotron {
+//     border-bottom: 0;
+//   }
+// }
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */
+    @media only screen and (max-width : 320px) {
+
+    }
