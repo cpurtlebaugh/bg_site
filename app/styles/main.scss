@@ -24,14 +24,38 @@ body {
 
 img {
   width: 100%;
-  height: 75%;
+  height: 100%;
   position: relative;
 }
 
 .main-body {
   background: white;
-  position: absolute;
+  position: relative;
+  margin-top: 10%;
+  width: 750px;
+  height: 325px;
+  border-color: black;
 }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  }
+
+.container {
+  width: 100%;
+  height: 100%;
+  // position: relative
+}
+
+// .img-background {
+//   width: 100%;
+//   height: 75%;
+//   position: absolute;
+//   // background-size: cover;
+// }
 
 
 // mailchimp signup
@@ -57,10 +81,10 @@ img {
 
 }
 
-// .mailchimp {
-//   float: left;
-//   margin-bottom: 10px;
-// }
+.mailchimp {
+  float: left;
+  margin-bottom: 10px;
+}
 // end mailchimp sign up
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -75,7 +99,7 @@ img {
 /* Custom page header */
 .header {
   // border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   background-color: $brand-heading;
   opacity: .4;
   width: 100%;
