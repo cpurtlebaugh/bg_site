@@ -1,12 +1,14 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 // endbower
 
 $brand-heading: #282828;
 $brand-accent: #d49575;
 // $brand-body: #747474;
 $brand-body: white;
+$brand-font: 'Montserrat', sans-serif;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -20,12 +22,14 @@ body {
   max-height: 450px;
   overflow: hidden;
   background-color: $brand-body;
+  font-family: $brand-font;
 }
 
 
 
 .main-body {
   position: relative;
+<<<<<<< HEAD
   width: 750px;
   height: 325px;
   margin-bottom: 10px;
@@ -38,6 +42,11 @@ body {
 .col-centered{
   float: none;
   margin: 0 auto;
+=======
+  margin-top: 10%;
+  // width: 750px;
+  // height: 325px;
+>>>>>>> d1b7992
 }
 
 .center-block {
