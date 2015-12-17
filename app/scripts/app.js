@@ -15,36 +15,38 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'MainCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'MainCtrl',
-        controllerAs: 'about'
+        controller: 'MainCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'MainCtrl',
-        controllerAs: 'contact'
+        controller: 'MainCtrl'
       })
       .when('/video', {
         templateUrl: 'views/video.html',
-        controller: 'MainCtrl',
-        controllerAs: 'video'
+        controller: 'MainCtrl'
       })
       .when('/lyrics', {
         templateUrl: 'views/lyrics.html',
-        controller: 'MainCtrl',
-        controllerAs: 'lyrics'
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
+
+    $locationProvider.html5Mode({
+       enabled: true,
+       requireBase: false
+    });
   });
