@@ -7,7 +7,16 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
+var modRewrite = require('connect-modrewrite');
+
 module.exports = function (grunt) {
+
+  // load s3 plugin
+
+  grunt.loadNpmTask('grunt-aws');
+
+  // Static Webserver
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -19,6 +28,8 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
+  var modRewrite = require('connect-modrewrite');
+
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
@@ -27,6 +38,35 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+
+    pkg: grunt.file.readJSON('package.json'),
+    aws: grunt.file.readJSON('.aws.json'),
+    s3: {
+      options: {
+        accessKeyId: "<%= aws.accessKeyId %>",
+        secretAccessKey: "<%= aws.secretAccessKey %>",
+        bucket: "<%= aws.bucket %>"
+      },
+
+       build: {
+        cwd: "public",
+        src: "**"
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 8000,
+          base: "public",
+          keepalive: true
+        }
+      }
+    }
+  });
+
+  // Default task(s).
+  grunt.registerTask("default", ["connect"]);
+
 
     // Project settings
     yeoman: appConfig,
