@@ -26,7 +26,7 @@ var appConfig = {
     dist: 'dist',
     s3AccessKey: grunt.option('s3AccessKey') || '',
     s3SecretAccessKey: grunt.option('s3SecretAccessKey') || '',
-    s3Bucket: grunt.option('s3Bucket') || 'boigirlofficial.com'
+    s3Bucket: grunt.option('s3Bucket') || 'www.boigirlofficial.com'
   };
 
   // // Configurable paths for the application
