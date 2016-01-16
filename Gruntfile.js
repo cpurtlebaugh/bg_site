@@ -1,4 +1,4 @@
-// Generated on 2015-10-16 using generator-angular 0.12.1
+// Generated on 2016-01-15 using generator-angular 0.12.1
 'use strict';
 
 // # Globbing
@@ -7,16 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-var modRewrite = require('connect-modrewrite');
-
 module.exports = function (grunt) {
-
-  // load s3 plugin
-
-  grunt.loadNpmTask('grunt-aws');
-
-  // Static Webserver
-  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -28,7 +19,15 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
-  var modRewrite = require('connect-modrewrite');
+  grunt.loadNpmTasks('grunt-aws-s3');
+// Configurable paths for the application
+var appConfig = {
+    app: require('./bower.json').appPath || 'app',
+    dist: 'dist',
+    s3AccessKey: grunt.option('s3AccessKey') || '',
+    s3SecretAccessKey: grunt.option('s3SecretAccessKey') || '',
+    s3Bucket: grunt.option('s3Bucket') || 'boigirlofficial.com',
+  };
 
   // Configurable paths for the application
   var appConfig = {
@@ -39,34 +38,23 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
-    aws: grunt.file.readJSON('.aws.json'),
-    s3: {
-      options: {
-        accessKeyId: "<%= aws.accessKeyId %>",
-        secretAccessKey: "<%= aws.secretAccessKey %>",
-        bucket: "<%= aws.bucket %>"
-      },
-
-       build: {
-        cwd: "public",
-        src: "**"
-      }
-    },
-    connect: {
-      server: {
-        options: {
-          port: 8000,
-          base: "public",
-          keepalive: true
-        }
-      }
-    }
-  });
-
-  // Default task(s).
-  grunt.registerTask("default", ["connect"]);
-
+    aws_s3: {
+            options: {
+                accessKeyId: appConfig.s3AccessKey,
+                secretAccessKey: appConfig.s3SecretAccessKey,
+                bucket: appConfig.s3Bucket,
+                region: 'us-west-1',
+            },
+            production: {
+              files: [
+                  { expand: true,
+                    dest: '.',
+                    cwd: 'dist/',
+                    src: ['**'],
+                    differential: true }
+                    ]
+                  }
+        },
 
     // Project settings
     yeoman: appConfig,
@@ -392,7 +380,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'yoTestApp',
+          module: 'boigirlofficialcomApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -534,4 +522,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deploy', ['build', 'aws_s3']);
 };
