@@ -26,14 +26,14 @@ var appConfig = {
     dist: 'dist',
     s3AccessKey: grunt.option('s3AccessKey') || '',
     s3SecretAccessKey: grunt.option('s3SecretAccessKey') || '',
-    s3Bucket: grunt.option('s3Bucket') || 'boigirlofficial.com',
+    s3Bucket: grunt.option('s3Bucket') || 'boigirlofficial.com'
   };
 
-  // Configurable paths for the application
-  var appConfig = {
-    app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
-  };
+  // // Configurable paths for the application
+  // var appConfig = {
+  //   app: require('./bower.json').appPath || 'app',
+  //   dist: 'dist'
+  // };
 
   // Define the configuration for all the tasks
   grunt.initConfig({
@@ -523,5 +523,7 @@ var appConfig = {
     'build'
   ]);
 
-  grunt.registerTask('deploy', ['build', 'aws_s3']);
+  grunt.registerTask('deploy', [
+    'build', 'aws_s3'
+  ]);
 };
