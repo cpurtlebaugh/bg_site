@@ -380,7 +380,7 @@ var appConfig = {
     ngtemplates: {
       dist: {
         options: {
-          module: 'boigirlofficialcomApp',
+          module: 'yoTestApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
