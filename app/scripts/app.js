@@ -16,7 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    // 'ui.router'
   ])
   .config(function ($routeProvider, $locationProvider) {
 
