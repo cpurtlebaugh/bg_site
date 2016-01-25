@@ -5,8 +5,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 $brand-heading: #282828;
 $brand-accent: #d49575;
-// $brand-body: #747474;
 $brand-body: white;
+$brand-primary: #5d525a;
+$brand-hover: #d49575;
 $brand-font: 'Montserrat', sans-serif;
 
 .browsehappy {
@@ -24,17 +25,39 @@ body {
   font-family: $brand-font;
 }
 
-  img {
-    width: 100%;
-    height: 100%;
-    position: relative;
+h1,h2,h3,h4,h5 {
+  font-family: $brand-font;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+.fa {
+  color: $brand-primary;
+  :hover {
+    color: $brand-hover;
   }
+}
+
 
 .main-body {
   position: relative;
+  color: $brand-primary;
   margin-bottom: 10px;
   border-radius: 5px;
-  margin-top: 2%;
+  margin-top: 6%;
+  a {
+    color: $brand-accent;
+  }
 }
 
 .center-block {
@@ -62,88 +85,94 @@ body {
   #mc-embedded-subscribe {
     background: black !important;
     color: white;
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
 }
 
 .mailchimp {
-  float: left;
+  // float: left;
   margin-bottom: 10px;
 }
 // end mailchimp sign up
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing {
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: $brand-heading;
-}
+// .header,
+// .marketing {
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   background-color: $brand-heading;
+// }
 
 
 /* Custom page header */
-.header {
-  // border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 0px;
-  background-color: $brand-heading;
-  opacity: .4;
-  width: 100%;
+// .header {
+//   // border-bottom: 1px solid #e5e5e5;
+//   margin-bottom: 0px;
+//   background-color: $brand-heading;
+//   opacity: .4;
+//   width: 100%;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+//   /* Make the masthead heading the same height as the navigation */
+//   h3 {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     line-height: 40px;
+//     padding-bottom: 19px;
+//   }
 
-  a {
-    color: white;
-    background-color: $brand-heading;
-  }
+//   a {
+//     color: $brand-a-tag;
+//     background-color: $brand-heading;
+//   }
 
-  li a:hover {
-    color: black;
-    background-color: white;
-  }
+//   li a:hover {
+//     color: $brand-hover;
+//     background-color: white;
+//   }
 
-  li a:active {
-    color: black;
-    background-color: white;
-  }
+//   li a:active {
+//     color: black;
+//     background-color: white;
+//   }
 
-  li a:focus {
-    color: black;
-    background-color: white;
-  }
-}
+//   li a:focus {
+//     color: black;
+//     background-color: white;
+//   }
+// }
 
 .navbar-nav {
+   opacity: .4;
    width: 100%;
    text-align: center;
    > li {
      float: none;
      display: inline-block;
+     a {
+      color: $brand-primary;
+     }
    }
    button.navbar-toggle {
-    background-color: white;
+    background-color: $brand-heading;
+   }
+   button:hover {
+    background-color: grey;
    }
  }
 
  .navbar-navbar {
   .navbar-nav {
-   width: 100%;
-   text-align: center;
-   > li {
-     float: none;
-     display: inline-block;
+     width: 100%;
+     text-align: center;
+     > li {
+       float: none;
+       display: inline-block;
+     }
+     button.navbar-toggle {
+      background-color: white;
+     }
    }
-   button.navbar-toggle {
-    background-color: white;
-   }
- }
-
  }
 
 
@@ -160,10 +189,10 @@ body {
   margin-top: 10px;
 }
 
-.social-media {
-  float: right;
-  margin-top: 10px;
-  position: relative;
+
+.icons {
+  margin: 0 auto;
+  display: block;
 }
 
 
@@ -176,6 +205,7 @@ body {
 .social-icons {
   max-height: 30px;
   max-width: 30px;
+  margin: 0 auto;
 }
 
 .container-narrow > hr {
@@ -195,28 +225,6 @@ body {
   float: left;
 }
 
-// /* Responsive: Portrait tablets and up */
-// @media screen and (min-width: 768px) {
-//   .container {
-//     max-width: 730px;
-//   }
-
-//   /* Remove the padding we set earlier */
-//   .header,
-//   .marketing,
-//   .footer {
-//     padding-left: 0;
-//     padding-right: 0;
-//   }
-//   /* Space out the masthead */
-//   .header {
-//     margin-bottom: 30px;
-//   }
-//   /* Remove the bottom border on the jumbotron for visual effect */
-//   .jumbotron {
-//     border-bottom: 0;
-//   }
-// }
 
 
     /*==========  Mobile First Method  ==========*/
