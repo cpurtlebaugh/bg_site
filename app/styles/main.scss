@@ -46,7 +46,6 @@ img {
   }
 }
 
-
 .main-body {
   position: relative;
   color: $brand-primary;
@@ -65,35 +64,20 @@ img {
   position: absolute;
 }
 
-// mailchimp signup
-.imc_embed_signup {
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-
-  input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    background-color: white;
-    border-color: white;
-    margin: 5px;
-    float: left;
+// ABOUT SECTION
+.about-img {
+  float: right;
+  img {
+    max-width: 75%;
+    max-height: 75%;
   }
-  #mc-embedded-subscribe {
-    background: black !important;
-    color: white;
-    margin-bottom: 20px;
-  }
-
 }
 
-.mailchimp {
+.about-text {
   float: left;
-  margin-bottom: 10px;
-  margin-left: 5%;
 }
-// end mailchimp sign up
+// END ABOUT SECTION
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 // .header,
@@ -141,10 +125,13 @@ img {
 //   }
 // }
 
+// START NAV BAR
 .navbar-nav {
    opacity: .4;
    width: 100%;
    text-align: center;
+  -webkit-backface-visibility: hidden;
+
    > li {
      float: none;
      display: inline-block;
@@ -174,6 +161,40 @@ img {
    }
  }
 
+// END NAVBAR
+
+// START MAIL CHIMP
+.imc_embed_signup {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background-color: white;
+    border-color: white;
+    margin: 5px;
+    float: left;
+  }
+  #mc-embedded-subscribe {
+    background: black !important;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+
+}
+
+.mailchimp {
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 5%;
+}
+// END MAIL CHIMP
+
+// BEGIN FOOTER
 
 .footer {
   position: absolute;
@@ -204,22 +225,13 @@ img {
   margin: 0 auto;
 }
 
+// END FOOTER
+
 .container-narrow > hr {
   margin: 30px 0;
 }
 
-// about section
-.about-img {
-  float: right;
-  img {
-    max-width: 75%;
-    max-height: 75%;
-  }
-}
 
-.about-text {
-  float: left;
-}
 
 
 

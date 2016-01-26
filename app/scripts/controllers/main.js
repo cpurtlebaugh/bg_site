@@ -14,4 +14,11 @@ angular.module('yoTestApp')
       'AngularJS',
       'Karma',
     ]
+
+    // quick fix for navbar dropdown to collapse
+        $(".nav a").click(function () {
+        if ($(".navbar-collapse").hasClass("in")) {
+            $('[data-toggle="collapse"]').click();
+        }
+    });
   });
