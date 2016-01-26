@@ -19,8 +19,6 @@ $brand-font: 'Montserrat', sans-serif;
 
 body {
   padding: 0;
-  // max-height: 450px;
-  overflow: scroll;
   background-color: $brand-body;
   font-family: $brand-font;
 }
@@ -91,8 +89,9 @@ img {
 }
 
 .mailchimp {
-  // float: left;
+  float: left;
   margin-bottom: 10px;
+  margin-left: 5%;
 }
 // end mailchimp sign up
 
@@ -189,12 +188,9 @@ img {
   margin-top: 10px;
 }
 
-
-.icons {
-  margin: 0 auto;
-  display: block;
+.social-media-div {
+  float: right;
 }
-
 
 .footer li {
   display: inline;
